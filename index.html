@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login & Signup</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="flex items-center justify-center min-h-screen bg-gray-500">
+    <div
+      id="formContainer"
+      class="bg-black/70 backdrop-blur-md w-full max-w-md mx-4 rounded-2xl shadow-2xl p-8 text-white transition-all duration-500"
+    >
+      <!-- Login Form -->
+      <form id="loginForm" class="space-y-5">
+        <h2 id="loginTitle" class="text-3xl font-bold text-center mb-4">
+          Sign In
+        </h2>
+
+        <input
+          id="loginEmail"
+          name="loginEmail"
+          type="email"
+          placeholder="Email"
+          class="w-full border border-gray-400 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-transparent text-white placeholder-gray-300"
+          required
+        />
+        <input
+          id="loginPassword"
+          name="loginPassword"
+          type="password"
+          placeholder="Password"
+          class="w-full border border-gray-400 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-transparent text-white placeholder-gray-300"
+          required
+        />
+
+        <!-- add id to submit button -->
+        <button
+          id="loginBtn"
+          type="submit"
+          class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition"
+        >
+          Login
+        </button>
+
+        <p id="noAccountText" class="text-center text-sm text-gray-300">
+          <span id="noAccountSpan">Don’t have an account?</span>
+          <a
+            id="showSignup"
+            class="text-indigo-400 font-medium hover:underline cursor-pointer"
+            >Sign Up</a
+          >
+        </p>
+      </form>
+
+      <!-- Signup Form -->
+      <form id="signupForm" class="hidden space-y-5">
+        <h2 id="signupTitle" class="text-3xl font-bold text-center mb-4">
+          Create Account
+        </h2>
+
+        <input
+          id="signupName"
+          name="signupName"
+          type="text"
+          placeholder="Full Name"
+          class="w-full border border-gray-400 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-transparent text-white placeholder-gray-300"
+          required
+        />
+        <input
+          id="signupEmail"
+          name="signupEmail"
+          type="email"
+          placeholder="Email"
+          class="w-full border border-gray-400 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-transparent text-white placeholder-gray-300"
+          required
+        />
+        <input
+          id="signupPassword"
+          name="signupPassword"
+          type="password"
+          placeholder="Password"
+          class="w-full border border-gray-400 rounded-lg px-4 py-2 focus:outline-none focus:ring-2 focus:ring-indigo-400 bg-transparent text-white placeholder-gray-300"
+          required
+        />
+
+        <!-- add id to submit button -->
+        <button
+          id="signupBtn"
+          type="submit"
+          class="w-full bg-indigo-600 text-white py-2 rounded-lg hover:bg-indigo-700 transition"
+        >
+          Sign Up
+        </button>
+
+        <p id="hasAccountText" class="text-center text-sm text-gray-300">
+          <span id="hasAccountSpan">Already have an account?</span>
+          <a
+            id="showLogin"
+            class="text-indigo-400 font-medium hover:underline cursor-pointer"
+            >Login</a
+          >
+        </p>
+      </form>
+
+      <!-- Language Button -->
+      <div class="flex justify-center mt-6">
+        <button
+          id="langBtn"
+          class="px-3 py-1 bg-indigo-600 text-white rounded-md hover:bg-indigo-700 transition"
+        >
+          العربية
+        </button>
+      </div>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
